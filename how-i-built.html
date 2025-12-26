@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How I Built This Website — Mohamed Nadeem</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+<section id="hero" class="page-hero">
+    <header>
+        <a class="header-logo" href="index.html">Mohamed<span>.</span></a>
+
+        <button class="nav-toggle" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav">
+            <a class="nav-item" href="index.html">Home</a>
+            <a class="nav-item" href="about.html">About</a>
+            <a class="nav-item" href="portfolio.html">Portfolio</a>
+            <a class="nav-item" href="blog.html">Blog</a>
+            <a class="nav-item" href="contact.html">Contact</a>
+        </nav>
+
+        <a class="header-btn" href="contact.html">Let’s Talk</a>
+    </header>
+
+    <div class="page-head">
+        <h1 class="page-title">How I Built This Website (Required)</h1>
+        <p class="page-subtitle">
+            A clear explanation of the technology I used and why I chose it—this is explicitly required for the e-portfolio.
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container post">
+        <div class="post-meta">
+            <span class="badge">GitHub Pages</span>
+            <span class="badge">HTML/CSS/JS</span>
+            <span class="badge">E-Portfolio Requirement</span>
+        </div>
+
+        <article>
+            <p>
+                I built this e-portfolio as a static website using HTML, CSS, and JavaScript, and I host it on GitHub Pages.
+                I chose this approach because it matches my professional identity as an IT/Cybersecurity student: I want full
+                control over structure, content, and presentation, and I want the site to be easy to maintain throughout my
+                final year.
+            </p>
+
+            <p>
+                GitHub Pages is a strong fit for an e-portfolio because it is reliable, free, and directly connected to the
+                workflow used in real IT teams: version control, clean folder structure, and incremental updates. Each change I
+                make is tracked in commits, which makes my learning visible and helps me improve the site over time without
+                breaking working pages. It also makes it simple to add new blog posts for assignments like Tech &amp; Meet
+                reflections—each reflection becomes its own page inside the <strong>/posts</strong> folder.
+            </p>
+
+            <p>
+                I intentionally avoided building this portfolio as a “personal blog” with random content. The navigation is
+                organized around my professional identity: About, Portfolio, Blog/Reflections, and Contact. The Blog section is
+                designed for proper 300–500 word reflections, focusing on what I learned and how I will apply it, rather than
+                short captions. I also included a separate page for this “How I built it” requirement so the evaluation criteria
+                is clearly met.
+            </p>
+
+            <p>
+                From a technical perspective, I used one shared stylesheet to keep the design consistent across all pages and a
+                small JavaScript file to handle navigation behavior and a simple contact form. This keeps the site lightweight,
+                fast, and easy to review. If I expand later, I can add more posts, better accessibility, and additional project
+                pages—without changing the overall structure.
+            </p>
+        </article>
+
+        <div class="section-cta">
+            <a class="btn cta-1" href="blog.html">Back to Blog</a>
+            <a class="btn cta-2" href="portfolio.html">View Portfolio</a>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div>© <span id="year"></span> Mohamed Sharfuddeen Nadeem — E-Portfolio</div>
+        <div class="footer-links">
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>

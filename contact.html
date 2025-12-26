@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Mohamed Nadeem</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+<section id="hero" class="page-hero">
+    <header>
+        <a class="header-logo" href="index.html">Mohamed<span>.</span></a>
+
+        <button class="nav-toggle" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav">
+            <a class="nav-item" href="index.html">Home</a>
+            <a class="nav-item" href="about.html">About</a>
+            <a class="nav-item" href="portfolio.html">Portfolio</a>
+            <a class="nav-item" href="blog.html">Blog</a>
+            <a class="nav-item" href="contact.html">Contact</a>
+        </nav>
+
+        <a class="header-btn" href="contact.html">Let’s Talk</a>
+    </header>
+
+    <div class="page-head">
+        <h1 class="page-title">Contact</h1>
+        <p class="page-subtitle">
+            For internships, junior roles, collaboration, or networking. This form opens your email client (mailto) so it works
+            on GitHub Pages without backend hosting.
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="grid-3">
+            <div class="card">
+                <h3>Email</h3>
+                <p><strong>sharffudeen@hotmail.com</strong></p>
+                <p class="section-subtitle">Preferred for professional contact.</p>
+            </div>
+            <div class="card">
+                <h3>Location</h3>
+                <p><strong>Bruges (Brugge), Belgium</strong></p>
+                <p class="section-subtitle">Open to roles in Belgium.</p>
+            </div>
+            <div class="card">
+                <h3>Profiles</h3>
+                <p class="section-subtitle">
+                    Add your LinkedIn + GitHub links in the header icons on the Home page.
+                </p>
+            </div>
+        </div>
+
+        <form id="contactForm" class="form">
+            <div class="field">
+                <label for="name">Your name</label>
+                <input id="name" name="name" placeholder="Enter your name" required />
+            </div>
+
+            <div class="field">
+                <label for="email">Your email</label>
+                <input id="email" name="email" type="email" placeholder="name@example.com" required />
+            </div>
+
+            <div class="field">
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" placeholder="Example: Internship opportunity" required />
+            </div>
+
+            <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button class="btn cta-1" type="submit">Send <i class="fa-solid fa-paper-plane"></i></button>
+                <a class="btn cta-2" href="blog.html">Read my blog</a>
+            </div>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div>© <span id="year"></span> Mohamed Sharfuddeen Nadeem — E-Portfolio</div>
+        <div class="footer-links">
+            <a href="how-i-built.html">How I built this</a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>

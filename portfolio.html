@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio — Mohamed Nadeem</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+<section id="hero" class="page-hero">
+    <header>
+        <a class="header-logo" href="index.html">Mohamed<span>.</span></a>
+
+        <button class="nav-toggle" aria-label="Open menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav class="nav">
+            <a class="nav-item" href="index.html">Home</a>
+            <a class="nav-item" href="about.html">About</a>
+            <a class="nav-item" href="portfolio.html">Portfolio</a>
+            <a class="nav-item" href="blog.html">Blog</a>
+            <a class="nav-item" href="contact.html">Contact</a>
+        </nav>
+
+        <a class="header-btn" href="contact.html">Let’s Talk</a>
+    </header>
+
+    <div class="page-head">
+        <h1 class="page-title">Portfolio</h1>
+        <p class="page-subtitle">
+            A selection of projects that reflect my practical cybersecurity and IT skills—especially internal network
+            security, reporting, and building structured documentation for real environments.
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="grid-3">
+            <div class="card">
+                <h3>Internal Network Security Assessment</h3>
+                <p>
+                    Conducted internal reconnaissance and service exposure reviews across multiple devices in an internal
+                    network. Validated configurations (e.g., exposed ports, security headers, authentication weaknesses) and
+                    documented risk and remediation steps.
+                </p>
+                <div class="meta">
+                    <span class="badge">Nmap</span>
+                    <span class="badge">Service enumeration</span>
+                    <span class="badge">Risk reporting</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Structured Pentest Reporting (Readable for Non-Technical)</h3>
+                <p>
+                    Built reporting style that clearly separates technical evidence from business impact. Included risk rating,
+                    reproduction steps, and “what to fix first” recommendations so stakeholders can act quickly.
+                </p>
+                <div class="meta">
+                    <span class="badge">Executive summary</span>
+                    <span class="badge">Evidence</span>
+                    <span class="badge">Actionable fixes</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Security Master Plan / Roadmap Work</h3>
+                <p>
+                    Contributed to a strategic security planning approach (2025–2027 style): governance, priorities, and
+                    improvement roadmap thinking—translating security needs into phased actions.
+                </p>
+                <div class="meta">
+                    <span class="badge">Governance</span>
+                    <span class="badge">Roadmaps</span>
+                    <span class="badge">Policies</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Technical toolbox</h2>
+            <p class="section-subtitle">
+                Tools and skills I frequently use (and keep improving through labs and projects).
+            </p>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Networking</h3>
+                    <p>TCP/IP fundamentals, scanning & mapping, traffic analysis, segmentation concepts.</p>
+                    <div class="meta">
+                        <span class="badge">Wireshark</span>
+                        <span class="badge">Nmap</span>
+                        <span class="badge">VLAN concepts</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Systems</h3>
+                    <p>Windows & Linux administration basics, service exposure review, hardening mindset.</p>
+                    <div class="meta">
+                        <span class="badge">Windows</span>
+                        <span class="badge">Linux</span>
+                        <span class="badge">Hardening</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Security</h3>
+                    <p>Web testing basics, internal security assessment workflows, clean documentation and remediation.</p>
+                    <div class="meta">
+                        <span class="badge">Burp Suite</span>
+                        <span class="badge">Nikto/Nuclei (awareness)</span>
+                        <span class="badge">Reporting</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-cta">
+                <a class="btn cta-1" href="blog.html">Read reflections</a>
+                <a class="btn cta-2" href="contact.html">Contact me</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <div>© <span id="year"></span> Mohamed Sharfuddeen Nadeem — E-Portfolio</div>
+        <div class="footer-links">
+            <a href="blog.html">Blog</a>
+            <a href="how-i-built.html">How I built this</a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>
