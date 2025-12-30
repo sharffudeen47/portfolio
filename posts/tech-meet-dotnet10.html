@@ -1,52 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>.NET 10 Demystified — Tech & Meet Reflection</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../reset.css" />
     <link rel="stylesheet" href="../styles.css" />
 </head>
 
 <body>
-<section id="hero" class="page-hero">
-    <header>
-        <a class="header-logo" href="../index.html">Mohamed<span>.</span></a>
 
-        <button class="nav-toggle" aria-label="Open menu">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+<!-- HEADER (same as index.html) -->
+<header class="site-header" role="banner">
+    <div class="wrap">
+        <div class="header-inner">
 
-        <nav class="nav">
-            <a class="nav-item" href="../index.html">Home</a>
-            <a class="nav-item" href="../about.html">About</a>
-            <a class="nav-item" href="../portfolio.html">Portfolio</a>
-            <a class="nav-item" href="../blog.html">Blog</a>
-            <a class="nav-item" href="../contact.html">Contact</a>
-        </nav>
+            <a class="brand" href="../index.html" aria-label="Go to Home">
+        <span class="brand-dot">
+          <i class="fa-solid fa-shield-halved"></i>
+        </span>
+                Mohamed<span class="accent">.</span>
+            </a>
 
-        <a class="header-btn" href="../contact.html">Let’s Talk</a>
-    </header>
+            <nav class="nav" aria-label="Primary navigation">
+                <a class="nav-item" href="../index.html">Home</a>
+                <a class="nav-item" href="../about.html">About</a>
+                <a class="nav-item" href="../portfolio.html">Portfolio</a>
+                <a class="nav-item" href="../blog.html">Blog</a>
+                <a class="nav-item" href="../contact.html">Contact</a>
+            </nav>
 
-    <div class="page-head">
-        <h1 class="page-title">.NET 10 Demystified — Tech & Meet Reflection</h1>
-        <p class="page-subtitle">
-            A 300–500 word reflection: what I liked, what I learned, and how it connects to my goals.
-        </p>
+            <div class="header-actions">
+                <a class="btn btn-primary header-cta" href="../contact.html">
+                    Let’s Talk <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobilePanel" class="mobile-panel">
+            <nav class="mobile-nav">
+                <a class="nav-item" href="../index.html">Home</a>
+                <a class="nav-item" href="../about.html">About</a>
+                <a class="nav-item" href="../portfolio.html">Portfolio</a>
+                <a class="nav-item" href="../blog.html">Blog</a>
+                <a class="nav-item" href="../contact.html">Contact</a>
+
+                <a class="btn btn-primary mobile-cta" href="../contact.html">
+                    Let’s Talk <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </nav>
+        </div>
+
+    </div>
+</header>
+
+<!-- PAGE INTRO -->
+<section class="section">
+    <div class="wrap">
+
+        <div class="post">
+
+            <div class="post-meta">
+                <span class="badge"><i class="fa-solid fa-users"></i> Tech &amp; Meet</span>
+                <span class="badge"><i class="fa-solid fa-code"></i> Software Engineering</span>
+                <span class="badge"><i class="fa-brands fa-linkedin"></i> Networking follow-up</span>
+                <span class="badge"><i class="fa-regular fa-clock"></i> ~3–4 min read</span>
+            </div>
+
+            <h1 class="page-title" style="margin-top:18px;">
+                .NET 10 Demystified — Tech &amp; Meet Reflection
+            </h1>
+
+            <p class="page-subtitle">
+                A 300–500 word reflection: what I liked, what I learned, and how it connects to my goals.
+            </p>
+
+        </div>
     </div>
 </section>
 
-<section class="section">
-    <div class="container post">
-        <div class="post-meta">
-            <span class="badge">Tech & Meet</span>
-            <span class="badge">Software Engineering</span>
-            <span class="badge">Networking follow-up</span>
-        </div>
+<!-- ARTICLE CONTENT -->
+<section class="section alt">
+    <div class="wrap">
 
-        <article>
+        <article class="post" aria-label="Blog post content">
+
             <p>
                 I attended a Tech &amp; Meet session titled “.NET 10 Demystified,” which gave me a clearer picture of how modern
                 software engineering is evolving and what “good engineering” looks like in real teams. Even though I come from
@@ -78,19 +127,30 @@
                 to stay close to both security and engineering—because the strongest security work happens when you understand how
                 systems are actually built and operated.
             </p>
+
         </article>
 
-        <div class="section-cta">
-            <a class="btn cta-1" href="../blog.html">Back to Blog</a>
-            <a class="btn cta-2" href="../portfolio.html">Portfolio</a>
+        <!-- CTA -->
+        <div class="section-actions" style="margin-top:26px;">
+            <a class="btn btn-ghost" href="../blog.html">
+                <i class="fa-solid fa-arrow-left"></i> Back to Blog
+            </a>
+            <a class="btn btn-primary" href="../portfolio.html">
+                View Portfolio <i class="fa-solid fa-arrow-right"></i>
+            </a>
         </div>
+
     </div>
 </section>
 
+<!-- FOOTER (same style as site) -->
 <footer class="footer">
-    <div class="container footer-inner">
+    <div class="wrap footer-inner">
         <div>© <span id="year"></span> Mohamed Sharfuddeen Nadeem — E-Portfolio</div>
         <div class="footer-links">
+            <a href="../about.html">About</a>
+            <a href="../portfolio.html">Portfolio</a>
+            <a href="../blog.html">Blog</a>
             <a href="../contact.html">Contact</a>
         </div>
     </div>
@@ -98,5 +158,4 @@
 
 <script src="../script.js"></script>
 </body>
-
 </html>

@@ -1,141 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mohamed Nadeem — Cybersecurity & IT Portfolio</title>
 
-    <!-- icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
     <!-- Styles -->
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-<section id="hero" class="hero-home">
-    <header>
-        <a class="header-logo" href="index.html" aria-label="Go to Home">
-            Mohamed<span>.</span>
-        </a>
 
-        <button class="nav-toggle" aria-label="Open menu">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+<header class="site-header" role="banner">
+    <div class="wrap">
+        <div class="header-inner">
+            <a class="brand" href="index.html" aria-label="Go to Home">
+                <span class="brand-dot"><i class="fa-solid fa-shield-halved"></i></span>
+                Mohamed<span class="accent">.</span>
+            </a>
 
-        <nav class="nav">
-            <a class="nav-item" href="index.html">Home</a>
-            <a class="nav-item" href="about.html">About</a>
-            <a class="nav-item" href="portfolio.html">Portfolio</a>
-            <a class="nav-item" href="blog.html">Blog</a>
-            <a class="nav-item" href="contact.html">Contact</a>
-        </nav>
+            <nav class="nav" aria-label="Primary navigation">
+                <a class="nav-item" href="index.html">Home</a>
+                <a class="nav-item" href="about.html">About</a>
+                <a class="nav-item" href="portfolio.html">Portfolio</a>
+                <a class="nav-item" href="blog.html">Blog</a>
+                <a class="nav-item" href="contact.html">Contact</a>
+            </nav>
 
-        <a class="header-btn" href="contact.html">Let’s Talk</a>
-    </header>
+            <div class="header-actions">
+                <a class="btn btn-primary header-cta" href="contact.html">
+                    Let’s Talk <i class="fa-solid fa-arrow-right"></i>
+                </a>
 
-    <div class="content">
-        <div class="left">
-            <h3>Hi, I’m Mohamed Sharfuddeen Nadeem</h3>
-            <h1>Cyber<span>security</span></h1>
+                <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
 
-            <p>
-                I’m a Belgium-based IT & Cybersecurity professional with strong hands-on experience in internal network
-                security assessments, vulnerability management, and building clear security documentation for both technical
-                and non-technical audiences. I recently completed a cybersecurity internship with WZC De Foyer, where I worked
-                on internal pentesting across multiple sites, security hardening recommendations, and structured reporting.
+        <!-- Mobile Menu -->
+        <div id="mobilePanel" class="mobile-panel" aria-label="Mobile navigation">
+            <nav class="mobile-nav">
+                <a class="nav-item" href="index.html">Home</a>
+                <a class="nav-item" href="about.html">About</a>
+                <a class="nav-item" href="portfolio.html">Portfolio</a>
+                <a class="nav-item" href="blog.html">Blog</a>
+                <a class="nav-item" href="contact.html">Contact</a>
+
+                <a class="btn btn-primary mobile-cta" href="contact.html">
+                    Let’s Talk <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="wrap">
+            <div class="hero-grid">
+
+                <div class="hero-left">
+                    <div class="kicker">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Belgium-based • Cybersecurity & IT
+                    </div>
+
+                    <h1 class="hero-title">
+                        Cyber<span>security</span><br>
+                        with clarity & real-world results
+                    </h1>
+
+                    <p class="hero-text">
+                        I’m Mohamed Sharfuddeen Nadeem — an IT & Cybersecurity professional focused on internal network security
+                        assessments, vulnerability management, and writing clear, evidence-driven security documentation for both
+                        technical and non-technical audiences. I recently completed a cybersecurity internship at WZC De Foyer,
+                        contributing to internal pentesting across multiple sites, hardening recommendations, and structured reporting.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a class="btn btn-primary" href="portfolio.html">
+                            Projects <i class="fa-solid fa-code"></i>
+                        </a>
+                        <a class="btn btn-ghost" href="blog.html">
+                            Read my reflections <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+
+                    <div class="quick-cards" aria-label="Quick overview cards">
+                        <div class="qc">
+                            <div class="qc-title"><i class="fa-solid fa-shield-halved"></i> Focus</div>
+                            <div class="qc-text">Infrastructure security, internal pentesting, hardening, reporting</div>
+                        </div>
+                        <div class="qc">
+                            <div class="qc-title"><i class="fa-solid fa-gears"></i> Tools</div>
+                            <div class="qc-text">Nmap, Wireshark, Burp Suite, Linux/Windows, Python/Bash</div>
+                        </div>
+                        <div class="qc">
+                            <div class="qc-title"><i class="fa-solid fa-graduation-cap"></i> Background</div>
+                            <div class="qc-text">Applied Computer Science (Cybersecurity) — Howest, Bruges</div>
+                        </div>
+                    </div>
+
+                    <div class="social" aria-label="Social links">
+                        <a href="https://www.linkedin.com/in/mohamed-sharfuddeen-nadeem" aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/sharffudeen47" aria-label="GitHub" target="_blank" rel="noopener">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="mailto:sharffudeen@hotmail.com" aria-label="Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="profile-card" aria-label="Profile card">
+                        <div class="topbar">
+                            <div class="status"><span class="dot"></span> Available for opportunities</div>
+                            <div class="tag">Internal Security • Reporting</div>
+                        </div>
+
+                        <!-- Update this image path -->
+                        <img
+                                class="profile-image"
+                                src="Images/1763847328060%5B1%5D%20-%20Copy.JPG"
+                                alt="Mohamed Sharfuddeen Nadeem profile picture"
+                                loading="lazy"
+                        />
+
+                        <div class="profile-overlay">
+                            <div class="name">Mohamed Sharfuddeen Nadeem</div>
+                            <div class="meta">
+                                <span><i class="fa-solid fa-shield"></i> Cybersecurity</span>
+                                <span><i class="fa-solid fa-network-wired"></i> Internal Pentesting</span>
+                                <span><i class="fa-solid fa-file-lines"></i> Clear Reporting</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION -->
+    <section class="section alt">
+        <div class="wrap">
+            <h2 class="section-title">What you’ll find on this portfolio</h2>
+            <p class="section-subtitle">
+                This website is my professional online presence. It documents my learning, assignments, Tech & Meet reflections,
+                and real-world security work — written in a way that’s useful for both recruiters and technical readers.
             </p>
 
-            <div class="cta-section">
-                <a class="cta-1 btn" href="portfolio.html">
-                    Projects <i class="fa-solid fa-code"></i>
-                </a>
-                <a class="cta-2 btn" href="blog.html">
-                    Read my reflections <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
-            </div>
-
-            <div class="quick-cards">
-                <div class="qc">
-                    <div class="qc-title"><i class="fa-solid fa-shield-halved"></i> Focus</div>
-                    <div class="qc-text">Infrastructure security, internal pentesting, hardening, reporting</div>
+            <div class="grid3">
+                <div class="card">
+                    <h3>Professional identity</h3>
+                    <p>
+                        A clear overview of who I am, what I do, and the roles I’m aiming for — written as a real webpage, not just a CV copy.
+                    </p>
                 </div>
-                <div class="qc">
-                    <div class="qc-title"><i class="fa-solid fa-gears"></i> Tools</div>
-                    <div class="qc-text">Nmap, Wireshark, Burp Suite, Linux/Windows, Python/Bash</div>
+
+                <div class="card">
+                    <h3>Portfolio projects</h3>
+                    <p>
+                        Real security work: internal network assessment, documentation, structured recommendations, and technical tooling.
+                    </p>
                 </div>
-                <div class="qc">
-                    <div class="qc-title"><i class="fa-solid fa-graduation-cap"></i> Background</div>
-                    <div class="qc-text">Applied Computer Science (Cybersecurity) — Howest, Bruges</div>
+
+                <div class="card">
+                    <h3>Blog reflections</h3>
+                    <p>
+                        300–500 word reflections on Tech & Meet sessions and other learning moments — what I learned and how I apply it.
+                    </p>
                 </div>
             </div>
 
-            <div class="social-section" aria-label="Social links">
-                <!-- Replace # with your real links -->
-                <a class="social" href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a class="social" href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a class="social" href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-
-            <div class="home-note">
-                <span class="pill">E-Portfolio</span>
-                <span class="pill">Tech & Meet reflections (300–500 words)</span>
-                <span class="pill">Website build post included</span>
+            <div class="section-actions">
+                <a class="btn btn-primary" href="blog.html">Go to Blog <i class="fa-solid fa-arrow-right"></i></a>
+                <a class="btn btn-ghost" href="how-i-built.html">How I built this website <i class="fa-solid fa-screwdriver-wrench"></i></a>
             </div>
         </div>
+    </section>
+</main>
 
-        <div class="right">
-            <div class="img-wrap">
-                <img class="hero-img" src="Images/1763847328060%5B1%5D%20-%20Copy.JPG" alt="Profile picture" />
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="section section-alt">
-    <div class="container">
-        <h2 class="section-title">What you’ll find on this portfolio</h2>
-        <p class="section-subtitle">
-            This website is built as my professional online presence. It documents my learning, assignments, and progress
-            through events (Tech & Meet) and real projects.
-        </p>
-
-        <div class="grid-3">
-            <div class="card">
-                <h3>Professional identity</h3>
-                <p>
-                    A clear overview of who I am, what I do, and what roles I’m aiming for — written as a webpage (not just a CV
-                    copy).
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Portfolio projects</h3>
-                <p>
-                    Real security work: internal network assessment, documentation, structured recommendations, and technical
-                    tooling.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Blog reflections</h3>
-                <p>
-                    300–500 word reflections on Tech & Meet sessions and other learning moments — what I learned and how I apply
-                    it.
-                </p>
-            </div>
-        </div>
-
-        <div class="section-cta">
-            <a class="btn cta-1" href="blog.html">Go to Blog</a>
-            <a class="btn cta-2" href="how-i-built.html">How I built this website</a>
-        </div>
-    </div>
-</section>
-
-<footer class="footer">
-    <div class="container footer-inner">
+<footer class="footer" role="contentinfo">
+    <div class="wrap footer-inner">
         <div>© <span id="year"></span> Mohamed Sharfuddeen Nadeem — E-Portfolio</div>
         <div class="footer-links">
             <a href="about.html">About</a>
@@ -148,5 +204,4 @@
 
 <script src="script.js"></script>
 </body>
-
 </html>
