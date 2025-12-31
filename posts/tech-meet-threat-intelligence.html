@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reflecting on Threat Intel — Mohamed Nadeem</title>
+    <title>Threat Intelligence: From Threats to Tactics — Mohamed Nadeem</title>
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -68,18 +68,33 @@
     <div class="wrap">
         <div class="post">
             <div class="post-meta">
-                <span class="badge"><i class="fa-solid fa-users"></i> Tech &amp; Meet</span>
-                <span class="badge"><i class="fa-solid fa-radar"></i> Threat Landscapes</span>
-                <span class="badge"><i class="fa-regular fa-clock"></i> ~4 min read</span>
+                <span class="badge"><i class="fa-solid fa-users"></i> Howest Tech &amp; Meet</span>
+                <span class="badge"><i class="fa-solid fa-radar"></i> Threat Intelligence</span>
+                <span class="badge"><i class="fa-solid fa-shield"></i> CCB Insights</span>
+                <span class="badge"><i class="fa-regular fa-calendar"></i> Oct 7</span>
+                <span class="badge"><i class="fa-regular fa-clock"></i> ~4–5 min read</span>
             </div>
 
             <h1 class="page-title" style="margin-top:18px;">
-                The Signal in the Noise: Making Threat Intelligence Operational
+                Threat Intelligence: From Threats to Tactics
             </h1>
 
             <p class="page-subtitle">
-                Moving past the headlines to understand how "intel" actually fuels smarter security decisions.
+                An eye-opening Howest session with insights from the Centre for Cybersecurity Belgium (CCB) — and a reminder that precision, context, and speed are what make defense effective.
             </p>
+
+            <figure style="margin-top:18px;">
+                <img
+                        src="../Images/threath%20and%20intelligance.png"
+                        alt="Howest Tech & Meet — Threat Intelligence: From Threats to Tactics"
+                        loading="lazy"
+                        style="width:50%; height:100%; border-radius:18px; display:block; border:1px solid rgba(255,255,255,0.12);"
+                />
+                <figcaption style="margin-top:10px; opacity:0.85;">
+                    Howest Tech&amp;Meet — “Threat Intelligence: From Threats to Tactics”
+                </figcaption>
+            </figure>
+
         </div>
     </div>
 </section>
@@ -90,25 +105,188 @@
 
         <article class="post" aria-label="Blog post content">
 
+            <!-- Page-only styles -->
+            <style>
+                .callout {
+                    border: 1px solid rgba(255,255,255,0.12);
+                    background: rgba(255,255,255,0.04);
+                    border-radius: 14px;
+                    padding: 16px 16px;
+                    margin: 18px 0;
+                }
+                .callout .callout-title {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-weight: 700;
+                    margin-bottom: 8px;
+                }
+                .mini-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                    gap: 14px;
+                    margin: 18px 0 6px;
+                }
+                .mini-card {
+                    border: 1px solid rgba(255,255,255,0.12);
+                    background: rgba(255,255,255,0.03);
+                    border-radius: 14px;
+                    padding: 14px;
+                }
+                .mini-card .k {
+                    font-size: 12px;
+                    opacity: 0.85;
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    margin-bottom: 6px;
+                }
+                .mini-card .v {
+                    font-weight: 700;
+                    line-height: 1.25;
+                }
+                .list-tight li { margin: 8px 0; }
+                .inline-icons {
+                    display: inline-flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                    margin-top: 12px;
+                }
+                .tag {
+                    border: 1px solid rgba(255,255,255,0.16);
+                    padding: 8px 10px;
+                    border-radius: 999px;
+                    font-size: 13px;
+                    opacity: 0.95;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    background: rgba(255,255,255,0.03);
+                }
+                .hr-soft {
+                    height: 1px;
+                    background: rgba(255,255,255,0.10);
+                    margin: 22px 0;
+                    border: 0;
+                }
+                @media (max-width: 860px) {
+                    .mini-grid { grid-template-columns: 1fr; }
+                }
+            </style>
+
             <p>
-                It is easy to get lost in the endless stream of security headlines, zero-day alerts, and CVE notifications. Before attending a recent Tech &amp; Meet session on Threat Intelligence, I viewed "intel" as a sort of advanced news feed. I walked away realizing that real intelligence isn't just about knowing what’s happening it’s about knowing what <strong>matters</strong>.
+                I had the great opportunity to attend the <strong>Howest Hogeschool Tech&amp;Meet</strong> session on
+                <em>“Threat Intelligence: From Threats to Tactics”</em> (October 7th).
+                With insights from the <strong>Centre for Cybersecurity Belgium (CCB)</strong>,
+                it genuinely felt like a masterclass in proactive cyber defense — especially for me as a cybersecurity student.
+            </p>
+
+            <div class="mini-grid" aria-label="Key takeaways at a glance">
+                <div class="mini-card">
+                    <div class="k">Focus</div>
+                    <div class="v">From headlines → operations</div>
+                </div>
+                <div class="mini-card">
+                    <div class="k">Core skills</div>
+                    <div class="v">Precision + context</div>
+                </div>
+                <div class="mini-card">
+                    <div class="k">Outcome</div>
+                    <div class="v">Faster, smarter decisions</div>
+                </div>
+            </div>
+
+            <div class="callout">
+                <div class="callout-title">
+                    <i class="fa-solid fa-bullseye"></i>
+                    The big message
+                </div>
+                <p style="margin:0;">
+                    Threat intelligence isn’t about consuming more information — it’s about filtering what matters, prioritizing correctly,
+                    and responding before attackers do.
+                </p>
+            </div>
+
+            <hr class="hr-soft" />
+
+            <h2 style="margin-top:22px;">1) Advanced threat hunting with fingerprinting</h2>
+            <p>
+                One of the most impressive parts was seeing how threat hunters go beyond simple domain names.
+                We explored how tools like <strong>J4X</strong> (for <strong>X.509 certificate fingerprints</strong>) and
+                <strong>J4S</strong> (for <strong>server connection fingerprints</strong>) can be used to pivot on indicators
+                and uncover malicious infrastructure with much higher confidence.
+            </p>
+
+            <div class="callout">
+                <div class="callout-title">
+                    <i class="fa-solid fa-fingerprint"></i>
+                    Why it’s powerful
+                </div>
+                <p style="margin:0;">
+                    What stood out to me is how the <strong>unique ordering</strong> of fingerprints can help analysts distinguish threats
+                    with incredible precision — even when adversaries rotate domains or try to “blend in.”
+                </p>
+            </div>
+
+            <h2 style="margin-top:22px;">2) EPSS for smarter prioritization</h2>
+            <p>
+                Another key lesson was how prioritization becomes much more honest when you combine scoring systems.
+                <strong>CVSS</strong> can describe potential impact, but it doesn’t always reflect real-world exploitation speed.
+                That’s where <strong>EPSS</strong> becomes extremely practical.
             </p>
 
             <p>
-                One of the most impactful takeaways from the session was the emphasis on <em>contextual relevance</em>. A dramatic report about a new exploit is just noise if that technology doesn't exist in your environment. I saw this firsthand during my internship: a "critical" vulnerability on paper can be a non-issue in reality if the system is isolated, while a "medium" bug can become a disaster if it sits on a core gateway. The speaker challenged us to always ask: "Does this affect our specific exposure?" This shift from <em>knowing</em> to <em>filtering</em> is what makes security operations sustainable.
+                The example that hit hard: a vulnerability with a <strong>CVSS score of 7.2</strong> might not look urgent at first —
+                but if the same issue has an <strong>EPSS score of 96.7%</strong>, it’s a strong signal that it’s likely to be exploited quickly.
+                That changes the timeline immediately: patch without delay.
+            </p>
+
+            <div class="callout">
+                <div class="callout-title">
+                    <i class="fa-solid fa-bolt"></i>
+                    My takeaway rule
+                </div>
+                <ul class="list-tight" style="margin:0; padding-left:18px;">
+                    <li><strong>CVSS</strong> = how bad it could be</li>
+                    <li><strong>EPSS</strong> = how soon it’s likely to be exploited</li>
+                    <li><strong>Operations</strong> = act based on exposure + business impact + speed</li>
+                </ul>
+            </div>
+
+            <h2 style="margin-top:22px;">3) Proactive nation-state defense: CCB “Spear Warning”</h2>
+            <p>
+                The CCB’s <strong>“Spear Warning” initiative</strong> was easily one of the most inspiring parts.
+                By actively scanning Belgian cyberspace and adopting a real “hacker mindset,” CCB proactively notifies organizations
+                about vulnerable assets <em>before attackers can exploit them</em> — even through email and physical letters.
             </p>
 
             <p>
-                I was also fascinated by the idea of "intel-driven prioritization." We can’t defend every single inch of a network with the same intensity resources are always limited. Threat intelligence allows a team to move from a reactive "whack-a-mole" approach to a proactive defensive strategy. It tells us which doors the attackers are actually eyeing so we can move our strongest locks there. This structured way of thinking resonates with me deeply; it turns security into a game of strategy rather than a game of luck.
+                What I loved is that it’s not only theory: this proactive approach has already led to a measurable drop in unpatched systems.
+                That’s what operational threat intelligence looks like when it’s done with responsibility.
+            </p>
+
+            <hr class="hr-soft" />
+
+            <h2 style="margin-top:22px;">What I’m taking forward</h2>
+            <p>
+                Overall, this session emphasized that <strong>precision, context, and speed</strong> are key in threat intelligence and defense.
+                It was one of the most valuable sessions I’ve attended this semester, because it showed how threat intelligence is actually applied in real life —
+                not just talked about.
             </p>
 
             <p>
-                Finally, the session touched on a point that hits close to home for me: the human element of reporting. You can have the most advanced threat data in the world, but if you can’t explain the risk to a system owner in a way that makes sense to them, that data is useless. Security findings need a narrative they need evidence, clear impact, and a realistic path to remediation.
+                Big thank-you to the speaker and organizers for such a practical and eye-opening evening.
             </p>
 
-            <p>
-                For me, threat intelligence is the bridge that connects the chaos of the outside world to the internal reality of a network. It's a skill I want to keep honing, specifically in how we map attacker behavior to our detection rules. Because at the end of the day, the goal isn't just to be "informed" it's to be <strong>effective</strong>.
-            </p>
+            <div class="inline-icons" aria-label="Keywords">
+                <span class="tag"><i class="fa-solid fa-hashtag"></i> Cybersecurity</span>
+                <span class="tag"><i class="fa-solid fa-hashtag"></i> ThreatIntelligence</span>
+                <span class="tag"><i class="fa-solid fa-hashtag"></i> Infosec</span>
+                <span class="tag"><i class="fa-solid fa-hashtag"></i> CCB</span>
+                <span class="tag"><i class="fa-solid fa-hashtag"></i> Howest</span>
+                <span class="tag"><i class="fa-solid fa-hashtag"></i> TechMeet</span>
+                <span class="tag"><i class="fa-solid fa-hashtag"></i> J4X</span>
+                <span class="tag"><i class="fa-solid fa-hashtag"></i> VulnerabilityManagement</span>
+            </div>
 
         </article>
 
