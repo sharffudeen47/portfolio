@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WZC De Foyer — Internship Wrap-Up Reflection</title>
+    <title>Reflecting on WZC De Foyer — Mohamed Nadeem</title>
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -15,15 +15,15 @@
 
 <body>
 
-<!-- HEADER (same as index.html) -->
+<!-- HEADER -->
 <header class="site-header" role="banner">
     <div class="wrap">
         <div class="header-inner">
 
             <a class="brand" href="../index.html" aria-label="Go to Home">
-        <span class="brand-dot">
-          <i class="fa-solid fa-shield-halved"></i>
-        </span>
+                <span class="brand-dot">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </span>
                 Mohamed<span class="accent">.</span>
             </a>
 
@@ -47,7 +47,6 @@
 
         </div>
 
-        <!-- Mobile menu -->
         <div id="mobilePanel" class="mobile-panel">
             <nav class="mobile-nav">
                 <a class="nav-item" href="../index.html">Home</a>
@@ -55,7 +54,6 @@
                 <a class="nav-item" href="../portfolio.html">Portfolio</a>
                 <a class="nav-item" href="../blog.html">Blog</a>
                 <a class="nav-item" href="../contact.html">Contact</a>
-
                 <a class="btn btn-primary mobile-cta" href="../contact.html">
                     Let’s Talk <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -68,32 +66,29 @@
 <!-- PAGE INTRO -->
 <section class="section">
     <div class="wrap">
-
         <div class="post">
-
             <div class="post-meta">
-        <span class="badge">
-          <i class="fa-solid fa-briefcase"></i> Internship
-        </span>
-                <span class="badge">
-          <i class="fa-solid fa-shield-halved"></i> Internal Security
-        </span>
-                <span class="badge">
-          <i class="fa-solid fa-file-lines"></i> Reporting & Remediation
-        </span>
-                <span class="badge">
-          <i class="fa-regular fa-clock"></i> ~3 min read
-        </span>
+                <span class="badge"><i class="fa-solid fa-briefcase"></i> Internship Reflection</span>
+                <span class="badge"><i class="fa-solid fa-user-shield"></i> Internal Security</span>
+                <span class="badge"><i class="fa-regular fa-clock"></i> ~4 min read</span>
             </div>
 
             <h1 class="page-title" style="margin-top:18px;">
-                WZC De Foyer — Internship Wrap-Up Reflection
+                Security That Respects Care: WZC De Foyer Lessons
             </h1>
 
             <p class="page-subtitle">
-                What I learned from real internal security work — and how it shaped my professional identity.
+                What I learned when cybersecurity stopped being “just a scan” and became something that had to work in a living, breathing elderly care organisation.
             </p>
 
+            <div class="post-hero-media" style="margin-top:18px;">
+                <img
+                        src="/Images/wzc%20defoyer.png"
+                        alt="WZC De Foyer internship – internal security work"
+                        style="width:100%; border-radius:16px; border:1px solid rgba(255,255,255,0.12);"
+                        loading="lazy"
+                />
+            </div>
         </div>
     </div>
 </section>
@@ -104,46 +99,179 @@
 
         <article class="post" aria-label="Blog post content">
 
-            <p>
-                My internship with WZC De Foyer was one of the most valuable experiences in my cybersecurity journey because it
-                forced me to think beyond “finding vulnerabilities” and focus on what really matters: understanding an
-                organization’s environment and helping it improve in a realistic way. Working with internal systems and devices
-                showed me that security is often about visibility, consistency, and good decisions — more than flashy exploits.
-            </p>
+            <!-- Small, self-contained styles for this page only (works with your existing CSS) -->
+            <style>
+                .callout {
+                    border: 1px solid rgba(255,255,255,0.12);
+                    background: rgba(255,255,255,0.04);
+                    border-radius: 14px;
+                    padding: 16px 16px;
+                    margin: 18px 0;
+                }
+                .callout .callout-title {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-weight: 700;
+                    margin-bottom: 8px;
+                }
+                .mini-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, minmax(0, 1fr));
+                    gap: 14px;
+                    margin: 18px 0 6px;
+                }
+                .mini-card {
+                    border: 1px solid rgba(255,255,255,0.12);
+                    background: rgba(255,255,255,0.03);
+                    border-radius: 14px;
+                    padding: 14px;
+                }
+                .mini-card .k {
+                    font-size: 12px;
+                    opacity: 0.85;
+                    letter-spacing: 0.02em;
+                    text-transform: uppercase;
+                    margin-bottom: 6px;
+                }
+                .mini-card .v {
+                    font-weight: 700;
+                    line-height: 1.25;
+                }
+                .list-tight li { margin: 8px 0; }
+                .inline-icons {
+                    display: inline-flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+                    margin-top: 10px;
+                }
+                .tag {
+                    border: 1px solid rgba(255,255,255,0.16);
+                    padding: 8px 10px;
+                    border-radius: 999px;
+                    font-size: 13px;
+                    opacity: 0.95;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    background: rgba(255,255,255,0.03);
+                }
+                @media (max-width: 820px) {
+                    .mini-grid { grid-template-columns: 1fr; }
+                }
+            </style>
 
             <p>
-                One of the biggest lessons I learned is how important scoping and documentation are. In internal testing, it is
-                easy to collect a lot of technical output (open ports, banners, service behavior), but the real skill is turning
-                that into something meaningful: what does it imply, who is impacted, and what should be fixed first? I improved
-                my ability to write findings with clear evidence, explain risk to non-technical stakeholders, and provide
-                practical remediation steps that teams can actually implement.
+                Before WZC De Foyer, I saw cybersecurity mostly through a technical lens: discover, verify, report.
+                But inside a multi-site elderly care organisation, the meaning changes.
+                A network isn’t “just infrastructure” it supports daily care, staff workflows, and services that need to stay stable.
+                That was the first real lesson: <strong>security is not only about finding risk, it’s about reducing risk without breaking trust or continuity.</strong>
             </p>
 
-            <p>
-                I also learned that internal environments contain a mix of modern systems and specialized devices. That changes
-                the security approach: you can’t treat everything as a normal laptop or server. Some devices may have limited
-                update paths, different ownership, or operational constraints. This taught me to think in terms of risk
-                reduction rather than perfect security, and to prioritize controls like segmentation, authentication,
-                hardened configuration, and monitoring.
-            </p>
+            <div class="mini-grid" aria-label="Internship at a glance">
+                <div class="mini-card">
+                    <div class="k">Environment</div>
+                    <div class="v">Multi-site network + VLAN reality</div>
+                </div>
+                <div class="mini-card">
+                    <div class="k">Focus</div>
+                    <div class="v">Internal visibility + safe assessment</div>
+                </div>
+                <div class="mini-card">
+                    <div class="k">Outcome</div>
+                    <div class="v">Evidence + roadmap (2025–2027)</div>
+                </div>
+            </div>
+
+            <div class="callout">
+                <div class="callout-title">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    The mindset shift
+                </div>
+                <p style="margin:0;">
+                    In a lab, an open port is a finding. In a care environment, that same port might be a fragile IoT system,
+                    a legacy device, or something tied to operations. I learned to pause and ask:
+                    <strong>“What is this supporting, who depends on it, and what’s the safest way to improve it?”</strong>
+                </p>
+            </div>
 
             <p>
-                Personally, I gained confidence in working independently while staying structured. I developed a repeatable
-                workflow for reconnaissance and review, and I strengthened my mindset of being responsible and professional:
-                test ethically, document accurately, and communicate clearly. Overall, the internship shaped my professional
-                identity as someone who wants to bridge security with infrastructure — understanding how systems run, how risks
-                appear in real networks, and how to guide improvements in a way that teams can maintain long-term.
+                A big part of my work was managing “technical noise” not ignoring it, but translating it.
+                I took raw scanning and enumeration output and turned it into decisions people could act on:
+                what’s urgent, what’s acceptable for now, what requires a plan, and what can be improved quickly with minimal disruption.
+                That’s where I felt most useful: <strong>bridging security and infrastructure</strong> in a way that respected the organisation’s constraints.
             </p>
+
+            <h2 style="margin-top:22px;">What I delivered</h2>
+            <ul class="list-tight">
+                <li>
+                    <strong>Internal network visibility (safe & scoped):</strong> mapping what exists, where it lives, and what’s exposed with caution around critical systems.
+                </li>
+                <li>
+                    <strong>Governance + evidence workflows:</strong> organizing findings so they don’t die in a folder, but become traceable actions and documentation.
+                </li>
+                <li>
+                    <strong>Asset visibility baseline:</strong> supporting an asset-first approach so security decisions start from “what we actually have.”
+                </li>
+                <li>
+                    <strong>Strategic Cybersecurity Master Plan (2025–2027):</strong> turning technical reality into a realistic roadmap grounded in budget, staffing, and priorities.
+                </li>
+                <li>
+                    <strong>Automation proof-of-concept:</strong> scan/enumeration output → structured draft reporting using Google Gemini CLI,
+                    with a strict human review step (because accuracy and context matter more than speed).
+                </li>
+            </ul>
+
+            <div class="callout">
+                <div class="callout-title">
+                    <i class="fa-solid fa-shield-check"></i>
+                    How I worked (the guardrails that mattered)
+                </div>
+                <ul class="list-tight" style="margin:0; padding-left: 18px;">
+                    <li><strong>Strict scope:</strong> only what was agreed, no “extra curiosity” on production systems.</li>
+                    <li><strong>Versioned outputs:</strong> repeatable runs, clear timestamps, consistent naming.</li>
+                    <li><strong>Logging:</strong> so results are explainable and defensible.</li>
+                    <li><strong>Human validation:</strong> AI-assisted drafting is useful, but never a substitute for judgment.</li>
+                </ul>
+            </div>
+
+            <p>
+                What surprised me most was how often “perfect security” is not the goal <em>resilient security is</em>.
+                I learned to value pragmatic controls: visibility, segmentation, hardening, and prioritization.
+                The wins that stick are usually the boring ones: documented processes, consistent baselines, and small improvements that compound.
+            </p>
+
+            <h2 style="margin-top:22px;">Lessons I’m taking forward</h2>
+            <ul class="list-tight">
+                <li><strong>Risk is contextual:</strong> severity isn’t only technical it’s operational, human, and sometimes emotional.</li>
+                <li><strong>Clarity beats complexity:</strong> stakeholders need options, impact, and a safe path forward.</li>
+                <li><strong>Visibility is a superpower:</strong> you can’t protect what you can’t see (or can’t name).</li>
+                <li><strong>Security is care:</strong> especially in healthcare environments stability is part of safety.</li>
+            </ul>
+
+            <p>
+                Looking back, this internship didn’t just improve my skills it shaped how I want to work.
+                I’m not chasing the loudest vulnerability.
+                I’m interested in building security that teams can actually maintain:
+                consistent, documented, and strong enough to last long after the assessment is over.
+            </p>
+
+            <div class="inline-icons" aria-label="Keywords">
+                <span class="tag"><i class="fa-solid fa-network-wired"></i> Internal Visibility</span>
+                <span class="tag"><i class="fa-solid fa-diagram-project"></i> Practical Risk Reduction</span>
+                <span class="tag"><i class="fa-solid fa-clipboard-check"></i> Evidence & Governance</span>
+                <span class="tag"><i class="fa-solid fa-robot"></i> Automation (with review)</span>
+            </div>
 
         </article>
 
         <!-- CTA -->
-        <div class="section-actions" style="margin-top:26px;">
+        <div class="section-actions" style="margin-top:35px;">
             <a class="btn btn-ghost" href="../blog.html">
                 <i class="fa-solid fa-arrow-left"></i> Back to Blog
             </a>
             <a class="btn btn-primary" href="../portfolio.html">
-                View Portfolio <i class="fa-solid fa-arrow-right"></i>
+                See the Project Details <i class="fa-solid fa-arrow-right"></i>
             </a>
         </div>
 
@@ -153,7 +281,7 @@
 <!-- FOOTER -->
 <footer class="footer">
     <div class="wrap footer-inner">
-        <div>© <span id="year"></span> Mohamed Sharfuddeen Nadeem — E-Portfolio</div>
+        <div>© <span id="year"></span> Mohamed Sharfuddeen Nadeem</div>
         <div class="footer-links">
             <a href="../about.html">About</a>
             <a href="../portfolio.html">Portfolio</a>

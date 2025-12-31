@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How I Built This Website — Mohamed Nadeem</title>
+    <title>Architecture & Philosophy | Mohamed Nadeem</title>
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -15,15 +15,15 @@
 
 <body>
 
-<!-- HEADER (same as index.html) -->
+<!-- HEADER -->
 <header class="site-header" role="banner">
     <div class="wrap">
         <div class="header-inner">
 
             <a class="brand" href="index.html" aria-label="Go to Home">
-          <span class="brand-dot" aria-hidden="true">
-            <i class="fa-solid fa-shield-halved"></i>
-          </span>
+                <span class="brand-dot" aria-hidden="true">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </span>
                 Mohamed<span class="accent">.</span>
             </a>
 
@@ -47,7 +47,6 @@
 
         </div>
 
-        <!-- Mobile menu panel -->
         <div id="mobilePanel" class="mobile-panel" aria-label="Mobile navigation">
             <nav class="mobile-nav">
                 <a class="nav-item" href="index.html">Home</a>
@@ -55,7 +54,6 @@
                 <a class="nav-item" href="portfolio.html">Portfolio</a>
                 <a class="nav-item" href="blog.html">Blog</a>
                 <a class="nav-item" href="contact.html">Contact</a>
-
                 <a class="btn btn-primary mobile-cta" href="contact.html">
                     Let’s Talk <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 </a>
@@ -70,16 +68,15 @@
     <div class="wrap">
         <div class="post">
             <div class="post-meta">
-                <span class="badge"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub Pages</span>
-                <span class="badge"><i class="fa-solid fa-code" aria-hidden="true"></i> HTML / CSS / JS</span>
-                <span class="badge"><i class="fa-solid fa-check" aria-hidden="true"></i> Required</span>
+                <span class="badge"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> Static Architecture</span>
+                <span class="badge"><i class="fa-solid fa-terminal" aria-hidden="true"></i> The "Vanilla" Stack</span>
                 <span class="badge"><i class="fa-regular fa-clock" aria-hidden="true"></i> ~3 min read</span>
             </div>
 
-            <h1 class="page-title" style="margin-top:18px;">How I Built This Website (Required)</h1>
+            <h1 class="page-title" style="margin-top:18px;">Simplicity as a Security Principle</h1>
 
             <p class="page-subtitle">
-                A clear explanation of the technology I used and why I chose it — included to directly meet the e-portfolio evaluation criteria.
+                A look at the technical choices behind this portfolio and why I chose fundamentals over frameworks.
             </p>
         </div>
     </div>
@@ -92,39 +89,34 @@
         <article class="post" aria-label="How I built this website">
 
             <p>
-                I built this e-portfolio as a static website using HTML, CSS, and JavaScript, and I host it on GitHub Pages.
-                I chose this approach because it matches my professional identity as an IT/Cybersecurity student: I want full
-                control over structure, content, and presentation, and I want the site to remain easy to maintain throughout my final year.
+                In an era of heavy JavaScript frameworks and bloated CMS platforms, I decided to take a different path for my professional portfolio. This site is built using a "Vanilla" stack: <strong>pure HTML, CSS, and JavaScript.</strong> It is hosted as a static site on GitHub Pages.
             </p>
 
             <p>
-                GitHub Pages is a strong fit for an e-portfolio because it is reliable, free, and connected to a workflow used in real IT teams:
-                version control, a clean folder structure, and incremental updates. Each change is tracked in commits, which makes it easy to improve
-                the site over time without breaking working pages. It also makes it simple to add new reflections — each post becomes its own page
-                inside the <strong>/posts</strong> folder.
+                As a cybersecurity student, I believe that knowing exactly what is running on your system is the first step toward securing it. By avoiding third-party templates or drag-and-drop builders, I maintain absolute control over the codebase. This approach eliminates the "hidden" vulnerabilities often found in complex plugins and ensures that the site is incredibly lightweight, fast, and resilient.
             </p>
 
             <p>
-                I intentionally avoided turning this into a random personal blog. Instead, the structure supports my professional profile and portfolio
-                requirements: About, Portfolio, Blog/Reflections, and Contact. The Blog section contains 300–500 word reflections focused on what I learned
-                and how I will apply it, rather than short captions. This page exists specifically to satisfy the “How I built it” requirement clearly and directly.
+                I chose GitHub Pages not just for its reliability, but for the <strong>workflow discipline</strong> it enforces. The entire project is managed via version control. Every blog post reflection and portfolio update is a discrete commit in a repository. This mimics the environment of a professional IT team maintaining a clean folder structure, tracking incremental changes, and ensuring that the "production" environment is always stable and audit-ready.
             </p>
 
             <p>
-                Technically, the site uses a shared stylesheet to keep the design consistent across all pages and a small JavaScript file to handle navigation
-                behavior (mobile menu + active link highlighting) and small utilities like the footer year. This keeps the website lightweight, fast, and easy to review.
-                If I expand later, I can add more posts and project pages without changing the overall structure.
+                Technically, the site relies on a shared stylesheet for visual consistency and a minimal JavaScript utility to handle navigation and UI states. Each blog post is its own semantic HTML file, ensuring that the content remains readable and accessible even if scripts are disabled. It’s a design philosophy that mirrors how I approach security: <strong>keep it simple, keep it transparent, and keep it maintainable.</strong>
+            </p>
+
+            <p>
+                This site will continue to grow as I do. Because the structure is modular, I can scale the content indefinitely without ever needing to worry about database overhead or platform migration. It serves as both a repository of my work and a living proof of my commitment to technical fundamentals.
             </p>
 
         </article>
 
         <!-- CTA -->
-        <div class="section-actions" style="margin-top:22px;">
+        <div class="section-actions" style="margin-top:35px;">
             <a class="btn btn-ghost" href="blog.html">
                 <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to Blog
             </a>
             <a class="btn btn-primary" href="portfolio.html">
-                View Portfolio <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                Explore the Portfolio <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
         </div>
 
@@ -134,7 +126,7 @@
 <!-- FOOTER -->
 <footer class="footer">
     <div class="wrap footer-inner">
-        <div>© <span id="year"></span> Mohamed Sharfuddeen Nadeem — E-Portfolio</div>
+        <div>© <span id="year"></span> Mohamed Sharfuddeen Nadeem</div>
         <div class="footer-links">
             <a href="about.html">About</a>
             <a href="portfolio.html">Portfolio</a>

@@ -1,114 +1,113 @@
-(function () {
-    // Footer year
-    const y = document.getElementById("year");
-    if (y) y.textContent = new Date().getFullYear();
+/**
+ * Mohamed Nadeem - Portfolio Core Logic
+ * Cleaned, optimized, and stabilized.
+ */
 
-    // Active nav highlighting
-    const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-    document.querySelectorAll(".nav-item").forEach(a => {
-        const href = (a.getAttribute("href") || "").toLowerCase();
-        if (href === path) a.classList.add("active");
+"use strict";
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // --- 1. UI Elements ---
+    const elements = {
+        year: document.getElementById("year"),
+        navItems: document.querySelectorAll(".nav-item"),
+        navToggle: document.querySelector(".nav-toggle"),
+        mobilePanel: document.getElementById("mobilePanel"),
+        contactForm: document.getElementById("contactForm")
+    };
+
+    // --- 2. Dynamic Footer Year ---
+    if (elements.year) {
+        elements.year.textContent = new Date().getFullYear();
+    }
+
+    // --- 3. Robust Active Navigation Highlighting ---
+    // This logic handles root paths, sub-folders, and index files more reliably
+    const currentPath = window.location.pathname.toLowerCase();
+
+    elements.navItems.forEach(link => {
+        const linkPath = link.getAttribute("href").toLowerCase().replace(/^\.\.\//, ""); // Remove relative path markers
+
+        // Highlight if path matches, or if we are at root and link is index
+        if (currentPath.endsWith(linkPath) || (currentPath === "/" && linkPath === "index.html")) {
+            link.classList.add("active");
+        }
     });
 
-    // Mobile nav toggle
-    const toggle = document.querySelector(".nav-toggle");
-    const panel = document.getElementById("mobilePanel");
+    // --- 4. Mobile Navigation Logic ---
+    if (elements.navToggle && elements.mobilePanel) {
 
-    function closeMenu(){
-        if (!panel) return;
-        panel.classList.remove("open");
-        if (toggle) toggle.setAttribute("aria-expanded", "false");
-    }
+        const toggleMenu = (forceClose = false) => {
+            const isOpening = forceClose ? false : !elements.mobilePanel.classList.contains("open");
 
-    if (toggle && panel) {
-        toggle.addEventListener("click", () => {
-            const isOpen = panel.classList.toggle("open");
-            toggle.setAttribute("aria-expanded", String(isOpen));
+            elements.mobilePanel.classList.toggle("open", isOpening);
+            elements.navToggle.setAttribute("aria-expanded", String(isOpening));
+
+            // Prevent background scrolling when menu is open (UX Polish)
+            document.body.style.overflow = isOpening ? "hidden" : "";
+        };
+
+        elements.navToggle.addEventListener("click", (e) => {
+            e.stopPropagation();
+            toggleMenu();
         });
 
-        // Close when clicking outside
+        // Close when clicking outside the menu or toggle
         document.addEventListener("click", (e) => {
-            const t = e.target;
-            const clickedInside = panel.contains(t) || toggle.contains(t);
-            if (!clickedInside) closeMenu();
+            if (elements.mobilePanel.classList.contains("open")) {
+                const isClickInside = elements.mobilePanel.contains(e.target) || elements.navToggle.contains(e.target);
+                if (!isClickInside) toggleMenu(true);
+            }
         });
 
-        // Close on escape
+        // Accessibility: Close on Escape key
         document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape") closeMenu();
+            if (e.key === "Escape" && elements.mobilePanel.classList.contains("open")) {
+                toggleMenu(true);
+            }
         });
 
-        // Close on link click
-        panel.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", closeMenu);
-        });
-    }
-})();
-
-(function () {
-    // Footer year
-    const y = document.getElementById("year");
-    if (y) y.textContent = new Date().getFullYear();
-
-    // Active nav highlighting
-    const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-    document.querySelectorAll(".nav-item").forEach(a => {
-        const href = (a.getAttribute("href") || "").toLowerCase();
-        if (href === path) a.classList.add("active");
-    });
-
-    // Mobile nav toggle
-    const toggle = document.querySelector(".nav-toggle");
-    const panel = document.getElementById("mobilePanel");
-
-    function closeMenu(){
-        if (!panel) return;
-        panel.classList.remove("open");
-        if (toggle) toggle.setAttribute("aria-expanded", "false");
-    }
-
-    if (toggle && panel) {
-        toggle.addEventListener("click", () => {
-            const isOpen = panel.classList.toggle("open");
-            toggle.setAttribute("aria-expanded", String(isOpen));
-        });
-
-        document.addEventListener("click", (e) => {
-            const t = e.target;
-            const clickedInside = panel.contains(t) || toggle.contains(t);
-            if (!clickedInside) closeMenu();
-        });
-
-        document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape") closeMenu();
-        });
-
-        panel.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", closeMenu);
+        // Close menu when a link is clicked (useful for single-page anchors)
+        elements.mobilePanel.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => toggleMenu(true));
         });
     }
 
-    // Contact form -> mailto (works on GitHub Pages)
-    const form = document.getElementById("contactForm");
-    if (form) {
-        form.addEventListener("submit", (e) => {
+    // --- 5. Contact Form to Mailto ---
+    if (elements.contactForm) {
+        elements.contactForm.addEventListener("submit", (e) => {
             e.preventDefault();
 
-            const name = document.getElementById("name")?.value?.trim() || "";
-            const email = document.getElementById("email")?.value?.trim() || "";
-            const subject = document.getElementById("subject")?.value?.trim() || "";
-            const message = document.getElementById("message")?.value?.trim() || "";
+            // Get values securely
+            const formData = {
+                name: document.getElementById("name")?.value?.trim() || "Anonymous",
+                email: document.getElementById("email")?.value?.trim() || "No email provided",
+                subject: document.getElementById("subject")?.value?.trim() || "Portfolio Inquiry",
+                message: document.getElementById("message")?.value?.trim() || ""
+            };
 
-            const to = "sharffudeen@hotmail.com";
-            const body =
-                `Name: ${name}
-Email: ${email}
+            const recipient = "sharffudeen@hotmail.com";
+            const bodyContent = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
 
-${message}`;
+            // Construct mailto link
+            const mailtoUri = `mailto:${recipient}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(bodyContent)}`;
 
-            const mailto = `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            window.location.href = mailto;
+            // UI Feedback: Show the user something happened
+            const submitBtn = elements.contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-circle-check"></i> Opening Email...';
+
+            // Trigger email client
+            window.location.href = mailtoUri;
+
+            // Reset button after a delay
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+                elements.contactForm.reset();
+            }, 3000);
         });
     }
-})();
-
+});
