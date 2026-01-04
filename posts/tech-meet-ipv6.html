@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Transitioning to IPv6 — Reflection | Mohamed Nadeem</title>
+    <title>Transitioning to IPv6 | Reflection | Mohamed Nadeem</title>
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -21,9 +21,9 @@
         <div class="header-inner">
 
             <a class="brand" href="../index.html" aria-label="Go to Home">
-        <span class="brand-dot" aria-hidden="true">
-          <i class="fa-solid fa-shield-halved"></i>
-        </span>
+          <span class="brand-dot" aria-hidden="true">
+            <i class="fa-solid fa-shield-halved"></i>
+          </span>
                 Mohamed<span class="accent">.</span>
             </a>
 
@@ -69,8 +69,8 @@
         <div class="post">
             <div class="post-meta">
                 <span class="badge"><i class="fa-solid fa-network-wired" aria-hidden="true"></i> IPv6</span>
-                <span class="badge"><i class="fa-solid fa-shield" aria-hidden="true"></i> Security by Design</span>
-                <span class="badge"><i class="fa-solid fa-arrows-split-up-and-left" aria-hidden="true"></i> Dual Stack</span>
+                <span class="badge"><i class="fa-solid fa-shield" aria-hidden="true"></i> Security by design</span>
+                <span class="badge"><i class="fa-solid fa-arrows-split-up-and-left" aria-hidden="true"></i> Dual stack</span>
                 <span class="badge"><i class="fa-solid fa-people-group" aria-hidden="true"></i> Tech&amp;Meet</span>
             </div>
 
@@ -79,14 +79,15 @@
             </h1>
 
             <p class="page-subtitle">
-                Reflection on an evening session about IPv6 adoption opportunities, risks, and practical steps to deploy IPv6 safely in real infrastructures.
+                A short reflection on an evening session about moving to IPv6 and how to do it in a safe, realistic way.
             </p>
 
             <div class="post-hero-media" style="margin-top:18px;">
                 <img
                         src="../Images/ipv6%20website.png"
-                        alt="WZC De Foyer internship – internal security work"
-                        style="width:50%; height:100%; border-radius:18px; display:block; border:1px solid rgba(255,255,255,0.12);"loading="lazy"
+                        alt="IPv6 session notes"
+                        style="width:50%; height:auto; border-radius:18px; display:block; border:1px solid rgba(255,255,255,0.12);"
+                        loading="lazy"
                 />
             </div>
         </div>
@@ -98,40 +99,41 @@
     <div class="wrap">
 
         <article class="post" aria-label="IPv6 reflection">
+
             <p>
-                The main message of this session was direct: the transition to IPv6 is not a “future topic”, it is an operational reality.
-                ISPs and large organisations have already moved forward, and SMEs are increasingly forced to follow not because IPv4 suddenly stops
-                working, but because the ecosystem around it is becoming more expensive, more complex, and less scalable.
+                The main message of this session was simple: IPv6 is not a “later” topic anymore. A lot of providers and big
+                organisations are already using it. Smaller companies are following too, not because IPv4 suddenly stops working,
+                but because running everything on IPv4 is getting harder and more expensive over time.
             </p>
 
             <p>
-                What I appreciated most is that IPv6 was not presented as a simple upgrade. IPv6 changes how networks behave:
-                addressing becomes abundant, NAT is no longer the default crutch, and the end-to-end model becomes realistic again.
-                That sounds cleaner but it also means visibility and control must be rebuilt properly. “Security by design” here means:
-                don’t treat IPv6 as a side feature; treat it as a first-class citizen in routing, firewalling, monitoring, and documentation.
+                I liked that IPv6 was not presented as an easy switch. It changes how networks work. You get a lot more address
+                space, NAT is not the default solution, and end to end connectivity becomes possible again. That can be a good thing,
+                but only if you rebuild your controls properly. IPv6 needs the same attention as IPv4 in routing, firewall rules,
+                monitoring, and documentation.
             </p>
 
             <p>
-                The strongest practical takeaway was about dual stack. In many environments, the real transition phase is not IPv6-only it’s IPv4 + IPv6
-                running together. And dual stack can be dangerous if handled casually: you can unintentionally double your attack surface, create bypass paths,
-                and end up with inconsistent rules (for example, a firewall policy that is strict on IPv4 but permissive on IPv6 “because nobody uses it yet”).
-                That mindset is exactly how quiet exposures happen.
+                The most useful part for me was the focus on dual stack. In many real networks, the transition means running IPv4 and
+                IPv6 at the same time. If you do that carelessly, you can create new gaps. One common example is having strict IPv4
+                firewall rules while IPv6 stays wide open because “we are not really using it yet”. That is exactly how hidden exposure
+                happens.
             </p>
 
             <p>
-                IPv6 also introduces protocol-specific risks teams must respect: router advertisements (RA), neighbour discovery (NDP),
-                address auto-configuration (SLAAC), and the way devices select routes. These are powerful features but they require guardrails.
-                The “secure by default” approach is to explicitly define what is allowed on IPv6, enable RA controls where needed, keep a default-deny posture,
-                and make logging/monitoring IPv6-aware (so incidents don’t disappear into blind spots).
+                IPv6 also has its own things you need to understand. Router advertisements, neighbour discovery, and auto configuration
+                are helpful features, but they can also be abused if they are not controlled. A safe baseline is to be explicit about
+                what is allowed, keep a default deny approach where possible, and make sure your logging and monitoring actually covers
+                IPv6 traffic.
             </p>
 
             <p>
-                My personal action plan after this session is very concrete: start with inventory and visibility (which systems already have IPv6 enabled?),
-                check DNS readiness (AAAA records, resolver policies), review firewall parity (IPv4 and IPv6 rules aligned), and validate tooling
-                (monitoring, SIEM, vulnerability scanning, and incident response playbooks that support IPv6 properly). If an organisation treats IPv6
-                as “just more addresses”, it will become a security gap. If it treats IPv6 as a structured transition program, dual stack becomes a safe bridge
-                instead of a hidden risk.
+                After this session, my personal plan is straightforward. First, check what already has IPv6 enabled. Then review DNS
+                readiness, especially AAAA records and resolver settings. After that, make sure firewall policies match on IPv4 and IPv6.
+                Finally, confirm the tools are ready: monitoring, scanning, and incident response should not ignore IPv6. If a company treats
+                IPv6 as “just more addresses”, it can become a blind spot. If they treat it as a planned transition, dual stack becomes a safe bridge.
             </p>
+
         </article>
 
         <!-- CTA -->

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Open Minds, Open Models — Mohamed Nadeem</title>
+    <title>Open Minds, Open Models | Mohamed Nadeem</title>
 
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -21,9 +21,9 @@
         <div class="header-inner">
 
             <a class="brand" href="../index.html" aria-label="Go to Home">
-        <span class="brand-dot">
-          <i class="fa-solid fa-shield-halved"></i>
-        </span>
+          <span class="brand-dot">
+            <i class="fa-solid fa-shield-halved"></i>
+          </span>
                 Mohamed<span class="accent">.</span>
             </a>
 
@@ -68,34 +68,30 @@
     <div class="wrap">
         <div class="post">
             <div class="post-meta">
-                <span class="badge"><i class="fa-solid fa-users"></i> Howest Tech &amp; Meet</span>
-                <span class="badge"><i class="fa-solid fa-brain"></i> Open-Source AI</span>
-                <span class="badge"><i class="fa-solid fa-cubes"></i> Hugging Face Ecosystem</span>
-                <span class="badge"><i class="fa-regular fa-clock"></i> ~5–6 min read</span>
+                <span class="badge"><i class="fa-solid fa-users"></i> Howest Tech and Meet</span>
+                <span class="badge"><i class="fa-solid fa-brain"></i> Open AI</span>
+                <span class="badge"><i class="fa-solid fa-cubes"></i> Hugging Face</span>
+                <span class="badge"><i class="fa-regular fa-clock"></i> 5 min read</span>
             </div>
 
             <h1 class="page-title" style="margin-top:18px;">
-                Open Minds, Open Models: Exploring the Open-Source AI Ecosystem
+                Open Minds, Open Models: Exploring the Open AI Ecosystem
             </h1>
 
             <p class="page-subtitle">
-                A Tech&amp;Meet session that made “open models” feel practical — not hype: what’s truly open, what’s open-weight,
-                how people run models locally, and why the gap with closed models is getting smaller.
+                This session made open models feel practical. We talked about what "open" really means, how people run models locally,
+                and why smaller models are becoming useful.
             </p>
 
-            <!-- ✅ BEST PLACE FOR A MAIN EVENT PHOTO (Hero image)
-                 Put your photo in /images/ and update the path below.
-                 Example: ../images/techmeet-openminds-hero.jpg
-            -->
             <figure style="margin-top:18px;">
                 <img
                         src="../Images/ml6.png"
-                        alt="Tech&Meet — Open Minds, Open Models"
+                        alt="Tech and Meet Open Minds Open Models"
                         loading="lazy"
                         style="width:100%; height:auto; border-radius:18px; display:block; border:1px solid rgba(255,255,255,0.12);"
                 />
                 <figcaption style="margin-top:10px; opacity:0.85;">
-                    Tech&amp;Meet — Open Minds, Open Models (Open-Source AI &amp; Hugging Face).
+                    Tech and Meet session on open models and the Hugging Face ecosystem.
                 </figcaption>
             </figure>
 
@@ -109,7 +105,7 @@
 
         <article class="post" aria-label="Blog post content">
 
-            <!-- Page-only styles (safe with your existing CSS) -->
+            <!-- Page-only styles -->
             <style>
                 .callout{
                     border:1px solid rgba(255,255,255,0.12);
@@ -119,13 +115,17 @@
                     margin:18px 0;
                 }
                 .callout .callout-title{
-                    display:flex; align-items:center; gap:10px;
-                    font-weight:700; margin-bottom:8px;
+                    display:flex;
+                    align-items:center;
+                    gap:10px;
+                    font-weight:700;
+                    margin-bottom:8px;
                 }
                 .mini-grid{
                     display:grid;
-                    grid-template-columns:repeat(3, minmax(0, 1fr));
-                    gap:14px; margin:18px 0 6px;
+                    grid-template-columns:repeat(2, minmax(0, 1fr));
+                    gap:14px;
+                    margin:18px 0 6px;
                 }
                 .mini-card{
                     border:1px solid rgba(255,255,255,0.12);
@@ -134,36 +134,52 @@
                     padding:14px;
                 }
                 .mini-card .k{
-                    font-size:12px; opacity:.85; letter-spacing:.02em;
-                    text-transform:uppercase; margin-bottom:6px;
+                    font-size:12px;
+                    opacity:.85;
+                    letter-spacing:.02em;
+                    text-transform:uppercase;
+                    margin-bottom:6px;
                 }
-                .mini-card .v{ font-weight:700; line-height:1.25; }
+                .mini-card .v{
+                    font-weight:700;
+                    line-height:1.25;
+                }
                 .list-tight li{ margin:8px 0; }
                 .inline-icons{
-                    display:inline-flex; gap:10px; flex-wrap:wrap;
+                    display:inline-flex;
+                    gap:10px;
+                    flex-wrap:wrap;
                     margin-top:12px;
                 }
                 .tag{
                     border:1px solid rgba(255,255,255,0.16);
-                    padding:8px 10px; border-radius:999px;
-                    font-size:13px; opacity:.95;
-                    display:inline-flex; align-items:center; gap:8px;
+                    padding:8px 10px;
+                    border-radius:999px;
+                    font-size:13px;
+                    opacity:.95;
+                    display:inline-flex;
+                    align-items:center;
+                    gap:8px;
                     background:rgba(255,255,255,0.03);
                 }
                 .hr-soft{
-                    height:1px; background:rgba(255,255,255,0.10);
-                    margin:22px 0; border:0;
+                    height:1px;
+                    background:rgba(255,255,255,0.10);
+                    margin:22px 0;
+                    border:0;
                 }
                 .gallery{
                     display:grid;
-                    grid-template-columns:repeat(3, minmax(0, 1fr));
-                    gap:12px; margin:16px 0 8px;
+                    grid-template-columns:repeat(2, minmax(0, 1fr));
+                    gap:12px;
+                    margin:16px 0 8px;
                 }
-                .gallery a,.gallery img{ display:block; width:100%; height:auto; border-radius:14px; }
-                .gallery a{
+                .gallery img{
+                    display:block;
+                    width:100%;
+                    height:auto;
+                    border-radius:14px;
                     border:1px solid rgba(255,255,255,0.12);
-                    background:rgba(255,255,255,0.02);
-                    overflow:hidden;
                 }
                 @media(max-width:860px){
                     .mini-grid{ grid-template-columns:1fr; }
@@ -172,66 +188,56 @@
             </style>
 
             <p>
-                This Tech&amp;Meet session felt different in a good way. Instead of “AI headlines,” it was about the
-                <strong>ecosystem</strong>: where open models live, how people actually run them, and what it means for privacy,
-                cost, latency, and customization. I left with a clearer view of how open-source AI can be used responsibly —
-                not just experimented with.
+                This Tech and Meet session was not about hype. It was about how people actually use open models.
+                We talked about the tools, the options, and what changes when you can run AI on your own machine.
+                I left with a clearer view of what is realistic today.
             </p>
 
             <div class="mini-grid" aria-label="Session at a glance">
                 <div class="mini-card">
                     <div class="k">Why it matters</div>
-                    <div class="v">Privacy + control + customization</div>
+                    <div class="v">Privacy, control, and flexibility</div>
                 </div>
                 <div class="mini-card">
-                    <div class="k">What I learned</div>
-                    <div class="v">Tools to run &amp; deploy models</div>
+                    <div class="k">Main topic</div>
+                    <div class="v">Hugging Face and open models</div>
                 </div>
             </div>
 
-            <!-- ✅ OPTIONAL: add 2–3 photos (room, speaker, slides, your notes) -->
             <div class="gallery" aria-label="Event photo gallery">
-
-                <a>
-                    <img src="../Images/hugging%20face%203.jpeg" alt="Open Minds, Open Models — photo 2" loading="lazy" />
-                </a>
-                <a>
-                    <img src="../Images/hugging%20faceee2.png" alt="Open Minds, Open Models — photo 3" loading="lazy" />
-                </a>
+                <img src="../Images/hugging%20face%203.jpeg" alt="Open models session photo 1" loading="lazy" />
+                <img src="../Images/hugging%20faceee2.png" alt="Open models session photo 2" loading="lazy" />
             </div>
 
             <div class="callout">
                 <div class="callout-title">
                     <i class="fa-solid fa-lightbulb"></i>
-                    The mindset shift
+                    A simple idea that helped me
                 </div>
                 <p style="margin:0;">
-                    “Open” isn’t one thing. The session clearly separated <strong>closed</strong>, <strong>open-weight</strong>,
-                    and <strong>fully open-source</strong> models — and why that difference matters when you care about transparency,
-                    governance, and data control.
+                    "Open" is not one thing. Some models are fully closed. Some are open-weight (you can download them).
+                    Some are closer to open-source with more transparency. It matters because it affects trust and control.
                 </p>
             </div>
 
             <hr class="hr-soft" />
 
-            <h2 style="margin-top:22px;">1) Hugging Face as the “GitHub for AI”</h2>
+            <h2 style="margin-top:22px;">Hugging Face in simple terms</h2>
             <p>
-                The Hugging Face ecosystem was explained in a very practical way: it’s the central place where
-                models, datasets, and demos (“Spaces”) are shared — making it easier for developers and teams to
-                discover, test, and reuse AI building blocks.
+                Hugging Face felt like a central place for AI building blocks. You can browse models, datasets, and demos.
+                It makes it easy to try things quickly before building a full project.
             </p>
 
             <ul class="list-tight">
-                <li><strong>Models:</strong> browse, filter by task, and compare what’s trending.</li>
-                <li><strong>Datasets:</strong> reusable training data for experiments or real pipelines.</li>
-                <li><strong>Spaces:</strong> quick demos to validate ideas without building a full app first.</li>
+                <li><strong>Models:</strong> search by task and compare options.</li>
+                <li><strong>Datasets:</strong> data you can reuse for training or testing.</li>
+                <li><strong>Spaces:</strong> small demos you can run in the browser.</li>
             </ul>
 
-            <h2 style="margin-top:22px;">2) “Open-source” vs “open-weight” vs “closed”</h2>
+            <h2 style="margin-top:22px;">Open-source vs open-weight vs closed</h2>
             <p>
-                This part made things click for me. Many “open” models are <strong>open-weight</strong> (you can download the weights),
-                but the <strong>training data</strong> and <strong>training code</strong> may still be unknown.
-                Fully open-source goes further: weights + code + (at least) transparent training approach.
+                This part was the most important for me. Many models are shared as weights, but the training data and training process can still be unknown.
+                Fully open-source usually means more transparency around how things were built.
             </p>
 
             <div class="callout">
@@ -240,81 +246,80 @@
                     Why teams choose open models
                 </div>
                 <ul class="list-tight" style="margin:0; padding-left:18px;">
-                    <li><strong>Data privacy:</strong> avoid sending sensitive data to third-party APIs.</li>
-                    <li><strong>Cost &amp; latency:</strong> run locally or on your own infrastructure.</li>
-                    <li><strong>Customization:</strong> fine-tune for a niche domain (coding, UI generation, data extraction).</li>
-                    <li><strong>Independence:</strong> reduce vendor lock-in and API dependency.</li>
+                    <li><strong>Privacy:</strong> you can avoid sending sensitive data to external APIs.</li>
+                    <li><strong>Cost:</strong> self-hosting can be cheaper for regular usage.</li>
+                    <li><strong>Speed:</strong> local models reduce latency for some tasks.</li>
+                    <li><strong>Customization:</strong> you can fine-tune for your own domain.</li>
                 </ul>
             </div>
 
-            <h2 style="margin-top:22px;">3) Tooling that makes it real (inference &amp; fine-tuning)</h2>
+            <h2 style="margin-top:22px;">Running models and fine-tuning</h2>
             <p>
-                What I loved is that the session didn’t stop at theory — it mapped the tooling landscape:
-                how to run models depending on your hardware, and how to fine-tune without needing a research lab.
+                We also talked about the practical side: how people run models depending on their hardware.
+                Some setups are GPU-heavy, but smaller models can also run on a decent laptop.
+                Fine-tuning is also more accessible than before, especially for narrow use cases.
             </p>
 
             <ul class="list-tight">
-                <li><strong>Inference (running models):</strong> options vary based on GPU/CPU/Apple Silicon — the “best” tool depends on your setup.</li>
-                <li><strong>Fine-tuning:</strong> community tooling (and notebooks) can make domain adaptation much more accessible.</li>
-                <li><strong>Try-before-build:</strong> inference widgets and “Spaces” reduce friction for experimentation.</li>
+                <li><strong>Inference:</strong> choosing tools based on your CPU or GPU.</li>
+                <li><strong>Fine-tuning:</strong> adapting a model for a specific task or dataset.</li>
+                <li><strong>Quick testing:</strong> using demos to check value before investing time.</li>
             </ul>
 
             <hr class="hr-soft" />
 
-            <h2 style="margin-top:22px;">4) Deployment: serverless vs self-hosted</h2>
+            <h2 style="margin-top:22px;">Deployment choices</h2>
             <p>
-                The session explained deployment in a way that finally felt structured:
-                either you use a provider (serverless) or you manage your own compute (self-hosted/dedicated).
-                Each choice comes with tradeoffs around cost, operational effort, privacy, and scaling.
+                The deployment discussion was clear: either you rely on a provider, or you host it yourself.
+                Both can work, but the tradeoff is control versus operational effort.
             </p>
 
             <div class="callout">
                 <div class="callout-title">
                     <i class="fa-solid fa-server"></i>
-                    Simple way to remember it
+                    Easy way to remember it
                 </div>
                 <p style="margin:0;">
-                    <strong>Serverless:</strong> easiest to start, pay per tokens/requests, but you rely on a provider.<br/>
-                    <strong>Self-hosted:</strong> more control + privacy, but you own the ops (hardware, scaling, monitoring).
+                    <strong>Provider hosted:</strong> easiest to start, but you depend on someone else.<br/>
+                    <strong>Self-hosted:</strong> more privacy and control, but you manage the system.
                 </p>
             </div>
 
-            <h2 style="margin-top:22px;">5) UI choices (local “ChatGPT-style” setups)</h2>
+            <h2 style="margin-top:22px;">Local chat style tools</h2>
             <p>
-                A practical highlight: there are multiple open or local interfaces that let you use models privately,
-                keeping conversations on your own machine. That’s huge for privacy-sensitive use cases.
+                One practical highlight was seeing how many tools exist to run a private chat interface locally.
+                That is useful when you want to keep prompts and data on your own device.
             </p>
 
             <ul class="list-tight">
-                <li><strong>Local chat apps:</strong> run models on your laptop with a familiar UI.</li>
-                <li><strong>Open web UIs:</strong> replicate chat-style experiences in a self-hosted way.</li>
-                <li><strong>Hugging Face chat tools:</strong> quick access to open models in a simple interface.</li>
+                <li><strong>Local chat apps:</strong> a simple way to talk to models on your laptop.</li>
+                <li><strong>Self-hosted web UIs:</strong> useful for teams or labs.</li>
+                <li><strong>Web demos:</strong> great for quick testing and learning.</li>
             </ul>
 
             <hr class="hr-soft" />
 
-            <h2 style="margin-top:22px;">6) Trends I’m watching after this session</h2>
+            <h2 style="margin-top:22px;">What I’m watching next</h2>
             <p>
-                The closing part tied everything together: open-source isn’t slowing down — it’s expanding into
-                smaller on-device models, reasoning, agents, multimodal, and even robotics.
+                The session ended with trends that are easy to notice now. Open models are improving fast, and smaller models are becoming practical.
+                This makes local and private use cases more realistic than before.
             </p>
 
             <ul class="list-tight">
-                <li><strong>Small Language Models (SLMs):</strong> running AI locally on phones/laptops.</li>
-                <li><strong>Reasoning models:</strong> better step-by-step problem solving (and open initiatives trying to replicate that).</li>
-                <li><strong>Agents:</strong> models operating in loops with tools, memory, and safer sandboxed environments.</li>
-                <li><strong>Multimodal:</strong> models that combine text + images + audio (and OCR becoming surprisingly strong).</li>
-                <li><strong>Open robotics:</strong> frameworks and tutorials aiming to democratize learning and building robotics workflows.</li>
+                <li><strong>Smaller models:</strong> good enough for many tasks and easier to run.</li>
+                <li><strong>Better reasoning:</strong> some open projects are pushing step-by-step quality.</li>
+                <li><strong>Agents:</strong> models using tools and loops to complete tasks.</li>
+                <li><strong>Multimodal:</strong> models that work with text and images.</li>
             </ul>
 
             <div class="callout">
                 <div class="callout-title">
                     <i class="fa-solid fa-flag-checkered"></i>
-                    My final takeaway
+                    My takeaway
                 </div>
                 <p style="margin:0;">
-                    The gap between open and closed models is shrinking — and the real advantage of open ecosystems is not just performance.
-                    It’s <strong>freedom</strong>: to learn, audit, customize, and deploy responsibly.
+                    Open models are not only about performance. The biggest value is control.
+                    You can learn more, customize more, and build in a way that fits your own rules.
                 </p>
             </div>
 
@@ -322,8 +327,7 @@
                 <span class="tag"><i class="fa-solid fa-hashtag"></i> Howest</span>
                 <span class="tag"><i class="fa-solid fa-hashtag"></i> TechMeet</span>
                 <span class="tag"><i class="fa-solid fa-hashtag"></i> HuggingFace</span>
-                <span class="tag"><i class="fa-solid fa-hashtag"></i> OpenSourceAI</span>
-                <span class="tag"><i class="fa-solid fa-hashtag"></i> LLM</span>
+                <span class="tag"><i class="fa-solid fa-hashtag"></i> OpenModels</span>
                 <span class="tag"><i class="fa-solid fa-hashtag"></i> AI</span>
             </div>
 
